@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "test-openldap.fullname" . }}
+  labels:
+    {{- include "test-openldap.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.ldapPort }}
+      targetPort: 10389
+      protocol: TCP
+      name: ldap
+    - port: {{ .Values.service.ldapsPort }}
+      targetPort: 10636
+      protocol: TCP
+      name: ldaps
+  selector:
+    {{- include "test-openldap.selectorLabels" . | nindent 4 }}
