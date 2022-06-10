@@ -1,0 +1,5 @@
+charts:
+  - name: test-openldap
+    repo:
+      git: manics/helm-test-openldap
+      published: https://www.manicstreetpreacher.co.uk/helm-test-openldap
