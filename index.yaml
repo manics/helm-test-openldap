@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  test-openldap:
+  - apiVersion: v2
+    appVersion: "2.1"
+    created: "2022-06-10T22:19:11.481917016+01:00"
+    description: Run a prefilled OpenLDAP server for testing
+    digest: a0e1cd16a0afc98232e6c736b74f14076af6572fb7c913b8e5aa0ae4318b2c2d
+    name: test-openldap
+    type: application
+    urls:
+    - https://www.manicstreetpreacher.co.uk/helm-test-openldap/test-openldap-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-06-10T22:19:11.481295051+01:00"
