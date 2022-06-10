@@ -6,8 +6,8 @@ This deploy the [`rroemhild/test-openldap` Docker image](https://hub.docker.com/
 
 ## Installation
 ```
-git clone https://github.com/manics/helm-test-openldap
-helm upgrade --install ldap ./helm-test-openldap --wait
+helm repo add test-openldap https://www.manicstreetpreacher.co.uk/helm-test-openldap/
+helm upgrade --install ldap test-openldap/test-openldap --wait
 ```
 An OpenLDAP server will be running inside the cluster on ports 389 (ldap) and 686 (ldaps).
 The service can be accessed at `ldap-test-openldap.<namespace>.svc.cluster.local`.
