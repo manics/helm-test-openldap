@@ -3,4 +3,4 @@ name: test-openldap
 description: Run a prefilled OpenLDAP server for testing
 type: application
 version: 0.0.1-set.by.chartpress
-appVersion: "2.1"
+appVersion: v2.4.0

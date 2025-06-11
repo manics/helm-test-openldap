@@ -7,7 +7,7 @@ replicaCount: 1
 image:
 # https://github.com/rroemhild/docker-test-openldap
 # https://hub.docker.com/r/rroemhild/test-openldap
-  repository: rroemhild/test-openldap
+  repository: ghcr.io/rroemhild/docker-test-openldap
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
