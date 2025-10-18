@@ -1,4 +1,5 @@
 # test-openldap Helm Chart
+[![Build](https://github.com/manics/helm-test-openldap/actions/workflows/build.yml/badge.svg)](https://github.com/manics/helm-test-openldap/actions/workflows/build.yml)
 
 Helm Chart to run an OpenLDAP server prepopulated with test data.
 
