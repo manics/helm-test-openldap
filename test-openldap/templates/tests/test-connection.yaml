@@ -8,8 +8,16 @@ metadata:
     "helm.sh/hook": test
 spec:
   containers:
-    - name: wget
-      image: busybox
-      command: ['wget']
-      args: ['{{ include "test-openldap.fullname" . }}:{{ .Values.service.port }}']
+    - name: ldapsearch
+      image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+      command: ["sh", "-c"]
+      args:
+        - >
+          ldapsearch
+          -H 'ldap://{{ include "test-openldap.fullname" . }}:{{ .Values.service.ldapPort }}'
+          -x -LL
+          -b 'ou=people,dc=planetexpress,dc=com'
+          -D 'cn=admin,dc=planetexpress,dc=com' -w GoodNewsEveryone
+          'uid=zoidberg' |
+          grep 'mail: zoidberg@planetexpress.com'
   restartPolicy: Never
